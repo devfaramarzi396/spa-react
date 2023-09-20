@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ShowPost = () => {
     const { postId } = useParams()
@@ -26,7 +26,7 @@ const ShowPost = () => {
             {loading && <div className="snipper-border"></div>}
             {post && <div className="card m-2" style={{ width: '18rem' }} key={post.id}>
                 <div className="card-header">
-                    <Link to={`posts/${post.id}`}> <h5 className="card-title">{post.title}</h5></Link>
+                    <h5 className="card-title">{post.title}</h5>
 
                 </div>
                 <div className="card-body">
