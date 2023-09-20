@@ -15,6 +15,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/users" component={IndexUsers} />
+          <Route path="/users/:id" component={User} />
           <Route path="/posts" component={IndexPosts} />
         </Switch>
       </BrowserRouter>
