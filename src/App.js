@@ -4,7 +4,7 @@ import Header from './components/Header.js';
 
 import RouteUser from './pages/Users/Route.js';
 
-import IndexPosts from './pages/Posts/Index.js';
+import RoutePost from './pages/Posts/Route.js';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/users" component={RouteUser}  />
-          <Route path="/posts" component={IndexPosts} />
+          <Route path="/posts" component={RoutePost} />
         </Switch>
       </BrowserRouter>
     </div>
