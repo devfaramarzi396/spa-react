@@ -24,7 +24,7 @@ const ShowPost = () => {
             <h1>show post id :{postId}</h1>
             {error && <p>{error}</p>}
             {loading && <div className="snipper-border"></div>}
-            {post && <div className="card m-2" style={{ width: '18rem' }} key={post.id}>
+            {post && <div className="card m-2" style={{ width: '33rem' }} key={post.id}>
                 <div className="card-header">
                     <h5 className="card-title">{post.title}</h5>
 
