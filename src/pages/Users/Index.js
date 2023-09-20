@@ -37,7 +37,7 @@ const IndexUsers = () => {
                     <h1>Users :</h1>
                     {loading && <div className="spinner-border"></div>}
                     {error && <p>{error}</p>}
-                    <bold>count of users : {len}</bold>
+                    <p>count of users : {len}</p>
                    
                     {/* <input style={{width:'300px'}} 
                     type="number" 

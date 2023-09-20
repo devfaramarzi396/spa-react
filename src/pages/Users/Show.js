@@ -32,6 +32,7 @@ const ShowUser = () => {
                     <li className="list-group-item"><span style={{ color: 'lightgreen' }}>username</span> : {user.username}</li>
                     <li className="list-group-item"><span style={{ color: 'lightgreen' }}>phone</span>: {user.phone}</li>
                     <li className="list-group-item"><span style={{ color: 'lightgreen' }}>website</span> : {user.website}</li>
+                    <li className="list-group-item"><span style={{ color: 'lightpink' }}>company</span> : {user.company.bs}</li>
                 </ul>
             </div>
             }
