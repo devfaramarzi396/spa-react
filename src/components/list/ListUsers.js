@@ -6,8 +6,8 @@ const ListUsers = ((props) => {
         <>
             {
                 props.users.map(user => (
-                    <Link to = {`users/${user.id}`} user={user}>
-                        <div className="card" style={{ width: '18rem' }} key={user.id}>
+                    <Link to = {`users/${user.id}`} user={user} className="card" style={{ width: '18rem' }} >
+                        <div  key={user.id}>
                             <div className="card-header">
                                 {user.name}
                             </div>

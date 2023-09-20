@@ -1,10 +1,11 @@
-// import { useParams } from "react-router-dom"
-const User = ({user}) => {
-    // const id = useParams()
+import { useParams } from "react-router-dom"
+const ShowUser = ({user}) => {
+     const {userId} = useParams()
 
     return (
         <>
-            <div className="card" style={{ width: '33rem' }} key={user.id}>
+        <h1>show user with id : {userId}</h1>
+            {/* <div className="card" style={{ width: '33rem' }} key={user.id}>
                 <div className="card-header">
                     {user.name}
                 </div>
@@ -13,8 +14,8 @@ const User = ({user}) => {
                     <li className="list-group-item"><span style={{ color: 'lightgreen' }}>phone</span>: {user.phone}</li>
                     <li className="list-group-item"><span style={{ color: 'lightgreen' }}>website</span> : {user.website}</li>
                 </ul>
-            </div>
+            </div> */}
         </>
     )
 }
-export default User
+export default ShowUser
