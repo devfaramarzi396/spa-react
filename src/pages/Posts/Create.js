@@ -3,10 +3,12 @@ import { useState } from "react";
 const CreatePost = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setLoading(true)
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify({
@@ -19,7 +21,14 @@ const CreatePost = () => {
             },
         })
             .then((response) => response.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+                setLoading(false)
+                setError(null)
+                console.log(data)
+            }).catch(err => {
+                setLoading(false)
+                setError(err.message)
+            });
 
     }
     return (
@@ -44,7 +53,13 @@ const CreatePost = () => {
                                     {body ? '' : "body is required"}
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-dark" disabled={title === '' || body === ''}>Create</button>
+                            <button type="submit" className="btn btn-dark" disabled={title === '' || body === ''}>
+                                {loading && <div className="spinner-border spinner-border-sm"></div>}
+                                Create
+                            </button>
+                            <div>
+                                {error && <p className="text-danger">{error}</p>}
+                            </div>
                         </form>
                     </div>
                 </div>
