@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const CreatePost = () => {
     const [title, setTitle] = useState('')
@@ -24,6 +25,11 @@ const CreatePost = () => {
             .then((data) => {
                 setLoading(false)
                 setError(null)
+                Swal.fire(
+                    'Good job!',
+                    'You created post!',
+                    'success'
+                  )
                 console.log(data)
             }).catch(err => {
                 setLoading(false)
