@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ShowPost = () => {
     const { postId } = useParams()
@@ -31,6 +31,10 @@ const ShowPost = () => {
                 </div>
                 <div className="card-body">
                     <p className="card-text">{post.body}</p>
+
+                </div>
+                <div className="card-footer">
+                    <Link to={`/posts/edit/${postId}`} className="btn btn-sm btn-dark">Edit</Link>
 
                 </div>
             </div>

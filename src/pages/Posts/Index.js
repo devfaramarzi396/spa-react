@@ -33,29 +33,27 @@ const IndexPosts = () => {
     // }
     return (
         <>
-            <div className="container mt-5">
-                <div className="row g-3">
-                    <h1>posts :</h1>
-                    <div>
-                        <Link className="btn btn-dark" to={"/posts/create"}>Create Post</Link>
-                    </div>
-                    {loading && <div className="spinner-border"></div>}
-                    {error && <p>{error}</p>}
-                    <p>count of posts : {len}</p>
 
-                    {/* <input style={{width:'300px'}} 
+            <h1>posts :</h1>
+            <div>
+                <Link className="btn btn-dark" to={"/posts/create"}>Create Post</Link>
+            </div>
+            {loading && <div className="spinner-border"></div>}
+            {error && <p>{error}</p>}
+            <p>count of posts : {len}</p>
+
+            {/* <input style={{width:'300px'}} 
                     type="number" 
                     id="num" 
                     placeholder="show me count of posts" 
                     onChange={(e)=> handle(e.target.value)} /> */}
-                    <br />
+            <br />
 
-                    {posts && <ListPosts posts={posts} />}
-                    {/* {users === null ? "" : <ListPosts posts={posts} />} */}
+            {posts && <ListPosts posts={posts} />}
+            {/* {users === null ? "" : <ListPosts posts={posts} />} */}
 
 
-                </div>
-            </div>
+
 
         </>
     )

@@ -29,7 +29,7 @@ const CreatePost = () => {
                     'Good job!',
                     'You created post!',
                     'success'
-                  )
+                )
                 console.log(data)
             }).catch(err => {
                 setLoading(false)
@@ -39,37 +39,35 @@ const CreatePost = () => {
     }
     return (
         <>
-            <div className="container mt-6">
-                <div className="row g-3">
-                    <div className="col-md-6">
-                        <h3>Create Post :</h3>
 
-                        <form onSubmit={(e) => handleSubmit(e)}>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Title</label>
-                                <input type="text" className="form-control" onChange={(e) => setTitle(e.target.value)} />
-                                <div className="form-text text-danger">
-                                    {title ? '' : 'title is required'}
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label className="form-label">Body</label>
-                                <textarea className="form-control" rows="3" onChange={(e) => setBody(e.target.value)}></textarea>
-                                <div className="form-text text-danger">
-                                    {body ? '' : "body is required"}
-                                </div>
-                            </div>
-                            <button type="submit" className="btn btn-dark" disabled={title === '' || body === ''}>
-                                {loading && <div className="spinner-border spinner-border-sm"></div>}
-                                Create
-                            </button>
-                            <div>
-                                {error && <p className="text-danger">{error}</p>}
-                            </div>
-                        </form>
+            <div className="col-md-6">
+                <h3>Create Post :</h3>
+
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" className="form-label">Title</label>
+                        <input type="text" className="form-control" onChange={(e) => setTitle(e.target.value)} />
+                        <div className="form-text text-danger">
+                            {title ? '' : 'title is required'}
+                        </div>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label className="form-label">Body</label>
+                        <textarea className="form-control" rows="3" onChange={(e) => setBody(e.target.value)}></textarea>
+                        <div className="form-text text-danger">
+                            {body ? '' : "body is required"}
+                        </div>
+                    </div>
+                    <button type="submit" className="btn btn-dark" disabled={title === '' || body === ''}>
+                        {loading && <div className="spinner-border spinner-border-sm"></div>}
+                        Create
+                    </button>
+                    <div>
+                        {error && <p className="text-danger">{error}</p>}
+                    </div>
+                </form>
             </div>
+
         </>
     )
 }
