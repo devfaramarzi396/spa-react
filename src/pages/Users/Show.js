@@ -29,10 +29,10 @@ const ShowUser = () => {
                     {user.name}
                 </div>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item"><span style={{ color: 'lightgreen' }}>username</span> : {user.username}</li>
-                    <li className="list-group-item"><span style={{ color: 'lightgreen' }}>phone</span>: {user.phone}</li>
-                    <li className="list-group-item"><span style={{ color: 'lightgreen' }}>website</span> : {user.website}</li>
-                    <li className="list-group-item"><span style={{ color: 'lightpink' }}>company</span> : {user.company.bs}</li>
+                    <li className="list-group-item"><span style={{ color: 'green' }}>username</span> : {user.username}</li>
+                    <li className="list-group-item"><span style={{ color: 'green' }}>phone</span>: {user.phone}</li>
+                    <li className="list-group-item"><span style={{ color: 'green' }}>website</span> : {user.website}</li>
+                    <li className="list-group-item"><span style={{ color: 'red' }}>company</span> : {user.company.bs}</li>
                 </ul>
             </div>
             }

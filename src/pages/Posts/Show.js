@@ -36,7 +36,7 @@ const ShowPost = () => {
                 </div>
                 <div className="card-footer">
 
-                    <Link to={`/posts/edit/${postId}`} className="btn btn-sm btn-dark me-3">Edit</Link>
+                    <Link to={`/posts/edit/${postId}`} className="btn btn-sm btn-dark me-3 ">Edit</Link>
 
                     <DeletePost postId={postId}/>
 
